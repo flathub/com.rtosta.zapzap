@@ -4,14 +4,17 @@ runtime-version: "6.2"
 sdk: org.kde.Sdk
 base: io.qt.qtwebengine.BaseApp
 base-version: "6.2"
-command: "zapzap"
+comamnd: zapzap
 finish-args:
   - "--share=ipc"
   - "--socket=x11"
   - "--socket=pulseaudio"
+  - "--socket=system-bus"
+  - "--socket=session-bus"
   - "--share=network"
   - "--filesystem=xdg-download"
   - "--device=dri"
+  - "--device=all"
   - "--env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess"
   - "--talk-name=org.kde.StatusNotifierWatcher"
 cleanup:
@@ -19,9 +22,16 @@ cleanup:
   - /lib/pkgconfig
   - "*.la"
   - "*.a"
-modules:
+modules:       
   - pyqt6.yml
   - pyqt6-webengine.yml
+  - name: dbus
+    buildsystem: simple
+    build-options:
+      build-args:
+      - --share=network
+    build-commands:
+      - pip3 install dbus-python --prefix=${FLATPAK_DEST} 
   - name: zapzap
     buildsystem: simple
     build-commands:
@@ -32,5 +42,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        tag: v1.0
+        tag: v1.1
       
