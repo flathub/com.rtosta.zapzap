@@ -45,5 +45,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        branch: v1.2
+        tag: v1.2
       
