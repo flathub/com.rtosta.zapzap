@@ -48,4 +48,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        branch: v3.0.1
+        branch: v3.0.1.1
