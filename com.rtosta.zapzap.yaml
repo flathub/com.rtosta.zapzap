@@ -15,16 +15,21 @@ finish-args:
   - "--share=network"
   - "--device=all"
   - "--device=dri"
-  - "--filesystem=host:ro"
+  - "--filesystem=host"
   - "--filesystem=xdg-download"
   - "--filesystem=xdg-config/autostart:create"
+  - "--talk-name=org.freedesktop.Notifications"
   - "--talk-name=org.kde.StatusNotifierWatcher"
   - "--talk-name=org.kde.StatusNotifierItem"
-  - "--talk-name=org.freedesktop.Notifications"
   - "--talk-name=org.freedesktop.portal.FileChooser"
+  - "--talk-name=com.canonical.AppMenu.Registrar"
+  - "--talk-name=com.canonical.Unity"
+  - "--talk-name=com.canonical.indicator.application"
+  - "--talk-name=org.ayatana.indicator.application"
   - "--unset-env=XDG_DATA_HOME"
+  - "--env=QT_PLUGIN_PATH=/app/lib64/plugins:/app/lib/plugins"
   - "--env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess"
-  - "--env=QT_QPA_PLATFORM=xcb"
+  
 cleanup:
   - /include
   - /lib/pkgconfig
@@ -53,4 +58,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        tag: v3.2.2-1
+        tag: v4.0
