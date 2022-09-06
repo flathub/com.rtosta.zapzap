@@ -58,4 +58,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        tag: v4.2
+        tag: v4.2.1
