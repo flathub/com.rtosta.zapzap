@@ -7,7 +7,6 @@ base-version: "6.3"
 command: zapzap
 finish-args:
   - "--share=ipc"
-  - "--socket=x11"
   - "--socket=wayland"
   - "--socket=fallback-x11"
   - "--socket=pulseaudio"
@@ -16,7 +15,7 @@ finish-args:
   - "--device=dri"
   - "--filesystem=host"
   - "--filesystem=xdg-download"
-  - "--filesystem=xdg-config/autostart:create"
+  - "--filesystem=xdg-config/autostart"
   - "--talk-name=org.freedesktop.Notifications"
   - "--talk-name=org.kde.StatusNotifierWatcher"
   - "--talk-name=org.kde.StatusNotifierItem"
