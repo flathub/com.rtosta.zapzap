@@ -7,15 +7,14 @@ base-version: "6.3"
 command: zapzap
 finish-args:
   - "--share=ipc"
-  - "--socket=x11"
   - "--socket=wayland"
+  - "--socket=fallback-x11"
   - "--socket=pulseaudio"
   - "--share=network"
   - "--device=all"
   - "--device=dri"
   - "--filesystem=host"
   - "--filesystem=xdg-download"
-  - "--filesystem=xdg-config/autostart:create"
   - "--talk-name=org.freedesktop.Notifications"
   - "--talk-name=org.kde.StatusNotifierWatcher"
   - "--talk-name=org.kde.StatusNotifierItem"
@@ -56,4 +55,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        tag: v4.4.1
+        tag: v4.4.2
