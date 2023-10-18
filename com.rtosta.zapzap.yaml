@@ -52,5 +52,5 @@ modules:
       - install -Dm644 share/metainfo/${FLATPAK_ID}.appdata.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.appdata.xml
     sources:
       - type: git
-        url: https://github.com/rafatosta/zapzap.git
-        tag: v4.5.2
+        url: https://github.com/zapzap-linux/zapzap.git
+        tag: v4.5.3
