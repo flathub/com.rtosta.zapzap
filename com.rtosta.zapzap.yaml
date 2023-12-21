@@ -52,4 +52,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/zapzap-linux/zapzap.git
-        tag: 5.0
+        tag: 5.1
