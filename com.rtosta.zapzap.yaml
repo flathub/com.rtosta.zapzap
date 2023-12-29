@@ -25,6 +25,7 @@ finish-args:
   - "--unset-env=XDG_DATA_HOME"
   - "--env=QT_PLUGIN_PATH=/app/lib64/plugins:/app/lib/plugins"
   - "--env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess"
+  - "--env=QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor"
 
 cleanup:
   - /include
@@ -52,4 +53,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/zapzap-linux/zapzap.git
-        tag: 5.1
+        tag: 5.1.1
