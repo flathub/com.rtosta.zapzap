@@ -7,7 +7,6 @@ base-version: "6.7"
 command: zapzap
 finish-args:
   - "--share=ipc"
-  - "--socket=wayland"
   - "--socket=fallback-x11"
   - "--socket=pulseaudio"
   - "--share=network"
@@ -45,4 +44,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        tag: 5.3.8
+        tag: 5.3.9
