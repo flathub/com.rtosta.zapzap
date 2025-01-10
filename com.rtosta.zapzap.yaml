@@ -16,7 +16,6 @@ finish-args:
   - "--talk-name=org.freedesktop.Notifications"
   - "--talk-name=org.kde.StatusNotifierWatcher"
   - "--env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess"
-  - "--env=QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor"
 
 cleanup:
   - /include
@@ -44,4 +43,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        tag: 5.3.9
+        tag: 6.0
