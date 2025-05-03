@@ -1,13 +1,14 @@
 app-id: com.rtosta.zapzap
 runtime: org.kde.Platform
-runtime-version: "6.8"
+runtime-version: "6.9"
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: "6.8"
+base-version: "6.9"
 command: zapzap
 finish-args:
   - "--share=ipc"
-  - "--socket=x11"
+  - "--socket=wayland"
+  - "--socket=fallback-x11"
   - "--socket=pulseaudio"
   - "--share=network"
   - "--device=all"
@@ -43,4 +44,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        tag: 6.0-beta-11-3
+        tag: 6.0.1.8
