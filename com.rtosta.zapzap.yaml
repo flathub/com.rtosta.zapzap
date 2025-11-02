@@ -12,7 +12,8 @@ finish-args:
   - "--socket=pulseaudio"
   - "--share=network"
   - "--device=all"
-  - "--filesystem=home"
+  - "--filesystem=xdg-documents"
+  - "--filesystem=xdg-pictures"
   - "--filesystem=xdg-download"
   - "--talk-name=org.freedesktop.Notifications"
   - "--talk-name=org.kde.StatusNotifierWatcher"
@@ -60,4 +61,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        tag: 6.2.2
+        tag: 6.2.1
