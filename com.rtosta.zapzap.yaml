@@ -15,6 +15,7 @@ finish-args:
   - "--filesystem=xdg-documents"
   - "--filesystem=xdg-pictures"
   - "--filesystem=xdg-download"
+  - "--filesystem=/tmp"
   - "--talk-name=org.freedesktop.Notifications"
   - "--talk-name=org.kde.StatusNotifierWatcher"
   - "--env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess"
