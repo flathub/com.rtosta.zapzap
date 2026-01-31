@@ -15,6 +15,11 @@ finish-args:
   - "--filesystem=xdg-documents"
   - "--filesystem=xdg-pictures"
   - "--filesystem=xdg-download"
+  - "--filesystem=xdg-videos"
+  - "--filesystem=xdg-music"
+  - "--filesystem=xdg-desktop"
+  - "--filesystem=xdg-public-share"
+  - "--filesystem=xdg-run/pipewire-0"
   - "--talk-name=org.freedesktop.Notifications"
   - "--talk-name=org.kde.StatusNotifierWatcher"
   - "--env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess"
@@ -61,4 +66,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        tag: 6.2.8
+        tag: 6.2.9
