@@ -50,6 +50,13 @@ modules:
   - name: zapzap
     buildsystem: simple
     build-commands:
+      - |
+        cat > zapzap/BuildInfo.py << EOF
+        BUILD_CHANNEL = "Official"
+        BUILD_PROVIDER = "Flatpak"
+        BUILD_REPOSITORY = "flathub/com.rtosta.zapzap"
+        EOF
+
       # Gera o wheel antes
       - python3 -m build --wheel --no-isolation
       # Instala o wheel dentro do Flatpak
@@ -61,4 +68,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        tag: 6.5.1
+        tag: 6.5.2
