@@ -53,8 +53,9 @@ modules:
       - |
         cat > zapzap/BuildInfo.py << EOF
         BUILD_CHANNEL = "Official"
-        BUILD_PROVIDER = "Flatpak"
+        BUILD_PROVIDER = "Flathub"
         BUILD_REPOSITORY = "flathub/com.rtosta.zapzap"
+        BUILD_PACKAGING = "Flatpak"
         EOF
 
       # Gera o wheel antes
@@ -68,4 +69,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/rafatosta/zapzap.git
-        tag: 6.5.2
+        tag: 6.5.2.4
